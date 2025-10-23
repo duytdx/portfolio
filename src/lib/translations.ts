@@ -18,6 +18,11 @@ export const translations = {
   
   // About Section
   'about.title': 'GIỚI THIỆU VỀ BẢN THÂN TÔI',
+  'about.whyChooseMe': 'Tại sao chọn tôi?',
+  'about.benefit1': 'Chuyên nghiệp, tận tâm và luôn đặt chất lượng lên hàng đầu',
+  'about.benefit2': 'Giao tiếp hiệu quả, cập nhật tiến độ thường xuyên',
+  'about.benefit3': 'Sử dụng công nghệ hiện đại, code sạch và có thể mở rộng',
+  'about.benefit4': 'Hỗ trợ tận tình, bảo hành chu đáo sau bàn giao',
   'about.yearsExperience': 'Năm kinh nghiệm',
   'about.projectsCompleted': 'Dự án hoàn thành',
   'about.happyClients': 'Khách hàng hài lòng',
