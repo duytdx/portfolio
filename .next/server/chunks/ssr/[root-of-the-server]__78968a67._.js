@@ -1636,10 +1636,7 @@ const projects = [
             "Xử lý 1000+ đơn hàng/tháng",
             "Tốc độ tải trang < 2 giây",
             "Tỷ lệ chuyển đổi tăng 35%"
-        ],
-        duration: "3 tháng",
-        role: "Full-stack Developer",
-        client: "Startup Thương mại điện tử"
+        ]
     },
     {
         id: "car-rental-system",
@@ -1681,10 +1678,7 @@ const projects = [
             "Tăng 35% tỷ lệ đặt xe trực tuyến",
             "Giảm 50% lỗi trùng lịch thuê",
             "Cải thiện 40% tốc độ xử lý giao dịch và phản hồi người dùng"
-        ],
-        duration: "5 tháng",
-        role: "Full-stack Developer",
-        client: "Công ty dịch vụ thuê xe cao cấp"
+        ]
     },
     {
         id: "portfolio-website",
@@ -1730,10 +1724,7 @@ const projects = [
             "Lighthouse score 98/100",
             "Page load time < 1 giây",
             "SEO score 100/100"
-        ],
-        duration: "1 tháng",
-        role: "Full-stack Developer",
-        client: "Personal Project"
+        ]
     }
 ];
 }),
@@ -2356,60 +2347,52 @@ __turbopack_context__.s([
 const pricingPlans = [
     {
         id: 'basic',
-        name: 'Landing Page',
-        price: '3.000.000',
-        duration: '1-2 tuần',
-        description: 'Phù hợp cho startup, cá nhân muốn có website giới thiệu',
+        name: 'Landing Page Cơ Bản',
+        price: '800.000đ',
+        duration: '3-5 ngày',
+        description: 'Phù hợp cho cá nhân, shop nhỏ cần web giới thiệu đơn giản',
         features: [
             'Thiết kế responsive (mobile, tablet, desktop)',
-            '5-7 sections (Hero, About, Services, Contact...)',
-            'Form liên hệ',
-            'Tối ưu SEO cơ bản',
-            'Tích hợp Google Analytics',
-            'Deploy lên hosting',
+            '3-5 sections (Hero, About, Services, Contact...)',
+            'Form liên hệ hoặc nút chat Zalo/Facebook',
+            'Tối ưu SEO cơ bản (title, meta, speed)',
+            'Triển khai miễn phí lên Vercel hoặc hosting có sẵn',
+            'Hỗ trợ chỉnh sửa 7 ngày sau bàn giao'
+        ],
+        cta: 'Liên hệ tư vấn'
+    },
+    {
+        id: 'standard',
+        name: 'Website Giới Thiệu',
+        price: '2.500.000đ',
+        duration: '7-10 ngày',
+        description: 'Phù hợp cho startup, cửa hàng hoặc dịch vụ cá nhân cần website chuyên nghiệp',
+        features: [
+            'Tất cả tính năng gói Cơ Bản',
+            '5-8 trang (Trang chủ, Dịch vụ, Giới thiệu, Liên hệ...)',
+            'Tích hợp Google Maps, Fanpage, hoặc Zalo',
+            'Blog tin tức cơ bản (thêm/sửa bài viết thủ công)',
+            'Form gửi mail liên hệ thực tế',
+            'Tối ưu SEO chuẩn Google',
             'Hỗ trợ 1 tháng sau bàn giao'
         ],
-        cta: 'Bắt đầu ngay'
-    },
-    {
-        id: 'professional',
-        name: 'Business Website',
-        price: '8.000.000',
-        duration: '3-4 tuần',
-        description: 'Dành cho doanh nghiệp vừa và nhỏ cần website chuyên nghiệp',
-        features: [
-            'Tất cả tính năng gói Landing Page',
-            'Trang quản trị Admin Dashboard',
-            'Quản lý nội dung động (CMS)',
-            '10-15 pages',
-            'Blog/News system',
-            'Multi-language support',
-            'Advanced SEO optimization',
-            'Tích hợp API bên thứ 3',
-            'Backup & Security',
-            'Hỗ trợ 3 tháng sau bàn giao'
-        ],
         popular: true,
-        cta: 'Chọn gói này'
+        cta: 'Liên hệ tư vấn'
     },
     {
-        id: 'enterprise',
-        name: 'Full Web Application',
-        price: '15.000.000+',
-        duration: '6-8 tuần',
-        description: 'Giải pháp toàn diện cho E-commerce, CRM, ERP',
+        id: 'premium',
+        name: 'Website Quản Lý Nội Dung (CMS)',
+        price: '5.000.000đ+',
+        duration: '2-3 tuần',
+        description: 'Dành cho doanh nghiệp nhỏ hoặc dự án cần quản lý dữ liệu động',
         features: [
-            'Tất cả tính năng gói Business',
-            'Custom tính năng theo yêu cầu',
-            'E-commerce/Booking system',
-            'User authentication & authorization',
-            'Payment gateway integration',
-            'Real-time features (Chat, Notification)',
-            'Advanced admin dashboard & analytics',
-            'Database optimization',
-            'Cloud deployment (AWS/VPS)',
-            'Source code & documentation đầy đủ',
-            'Hỗ trợ 6 tháng + maintenance'
+            'Tất cả tính năng gói Giới Thiệu',
+            'Trang quản trị Admin (CRUD nội dung, bài viết)',
+            'Cấu trúc database cơ bản (MySQL hoặc MongoDB)',
+            'Chức năng đăng nhập / phân quyền cơ bản',
+            'Tích hợp API hoặc gửi dữ liệu qua form',
+            'Triển khai lên server hoặc VPS riêng',
+            'Hỗ trợ 3 tháng sau bàn giao'
         ],
         cta: 'Liên hệ tư vấn'
     }
@@ -2720,70 +2703,70 @@ __turbopack_context__.s([
 ]);
 const workflowSteps = [
     {
-        id: 'consultation',
+        id: "consultation",
         step: 1,
-        icon: 'chat-dots',
-        title: 'Tư vấn & Phân tích',
-        description: 'Trao đổi chi tiết về dự án, yêu cầu, mục tiêu và ngân sách. Phân tích và đề xuất giải pháp phù hợp nhất.',
-        duration: '1-2 ngày'
+        icon: "chat-dots",
+        title: "Trao đổi & Tư vấn",
+        description: "Trao đổi nhanh qua Zalo hoặc Messenger để hiểu rõ yêu cầu, mục tiêu và phong cách website mong muốn.",
+        duration: "0.5 - 1 ngày"
     },
     {
-        id: 'proposal',
+        id: "proposal",
         step: 2,
-        icon: 'file-earmark-text',
-        title: 'Báo giá & Hợp đồng',
-        description: 'Gửi báo giá chi tiết, timeline dự án và hợp đồng. Sau khi thống nhất, ký kết và thanh toán đặt cọc 30-50%.',
-        duration: '1-2 ngày'
+        icon: "file-earmark-text",
+        title: "Báo giá & Xác nhận",
+        description: "Gửi demo mẫu hoặc layout tham khảo kèm báo giá chi tiết. Khách xác nhận và chuyển cọc 30-50% để bắt đầu.",
+        duration: "1 ngày"
     },
     {
-        id: 'design',
+        id: "design",
         step: 3,
-        icon: 'palette',
-        title: 'Thiết kế UI/UX',
-        description: 'Thiết kế mockup, prototype giao diện. Review và chỉnh sửa theo feedback cho đến khi hài lòng.',
-        duration: '3-7 ngày'
+        icon: "palette",
+        title: "Thiết kế Giao diện",
+        description: "Thiết kế giao diện trên Figma hoặc code trực tiếp. Gửi preview sớm để khách duyệt và góp ý.",
+        duration: "2-3 ngày"
     },
     {
-        id: 'development',
+        id: "development",
         step: 4,
-        icon: 'code-slash',
-        title: 'Phát triển',
-        description: 'Coding frontend và backend theo thiết kế đã duyệt. Cập nhật tiến độ định kỳ, demo từng phần hoàn thành.',
-        duration: '1-6 tuần'
+        icon: "code-slash",
+        title: "Lập trình Website",
+        description: "Xây dựng website hoàn chỉnh (frontend + backend nếu có). Gửi bản demo cho khách kiểm tra tiến độ.",
+        duration: "3-7 ngày"
     },
     {
-        id: 'testing',
+        id: "testing",
         step: 5,
-        icon: 'bug',
-        title: 'Testing & QA',
-        description: 'Test toàn bộ tính năng, fix bugs, tối ưu performance. Bàn giao cho client test và góp ý.',
-        duration: '3-5 ngày'
+        icon: "bug",
+        title: "Kiểm thử & Chỉnh sửa",
+        description: "Test toàn bộ tính năng, giao diện, tốc độ. Sửa lỗi và tinh chỉnh theo phản hồi của khách.",
+        duration: "1-2 ngày"
     },
     {
-        id: 'deployment',
+        id: "deployment",
         step: 6,
-        icon: 'rocket-takeoff',
-        title: 'Deploy & Bàn giao',
-        description: 'Deploy lên server/hosting, hướng dẫn sử dụng. Bàn giao source code, tài liệu. Thanh toán số tiền còn lại.',
-        duration: '1-2 ngày'
+        icon: "rocket-takeoff",
+        title: "Bàn giao & Triển khai",
+        description: "Upload website lên hosting hoặc Vercel, bàn giao file source code, hướng dẫn sử dụng và thanh toán phần còn lại.",
+        duration: "0.5 - 1 ngày"
     },
     {
-        id: 'support',
+        id: "support",
         step: 7,
-        icon: 'headset',
-        title: 'Hỗ trợ & Bảo hành',
-        description: 'Hỗ trợ sửa lỗi phát sinh, hướng dẫn thêm nếu cần. Bảo hành theo gói dịch vụ đã chọn.',
-        duration: '1-6 tháng'
+        icon: "headset",
+        title: "Hỗ trợ Sau Bàn giao",
+        description: "Hỗ trợ chỉnh sửa nhỏ, hướng dẫn thêm hoặc xử lý lỗi trong thời gian bảo hành tùy theo gói dịch vụ (7 ngày – 3 tháng).",
+        duration: "7 ngày - 3 tháng"
     }
 ];
 const workflowByLang = {
     vi: {
-        title: 'QUY TRÌNH LÀM VIỆC',
-        subtitle: 'Quy trình làm việc chuyên nghiệp, minh bạch từ A đến Z'
+        title: "QUY TRÌNH LÀM VIỆC",
+        subtitle: "Quy trình làm việc chuyên nghiệp, minh bạch từ A đến Z"
     },
     en: {
-        title: 'WORKFLOW PROCESS',
-        subtitle: 'Professional and transparent workflow from A to Z'
+        title: "WORKFLOW PROCESS",
+        subtitle: "Professional and transparent workflow from A to Z"
     }
 };
 }),

@@ -4,14 +4,12 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Project } from '@/types';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ProjectDetailProps {
   project: Project;
 }
 
 export default function ProjectDetail({ project }: ProjectDetailProps) {
-  const { language } = useLanguage();
   const [selectedMedia, setSelectedMedia] = useState(0);
 
   const allMedia = [
@@ -32,7 +30,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           >
             <i className="bi bi-arrow-left text-xl"></i>
             <span className="font-semibold">
-              {language === 'vi' ? 'Quay lại dự án' : 'Back to Projects'}
+              Quay lại dự án
             </span>
           </Link>
           
@@ -55,7 +53,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all"
                 >
                   <i className="bi bi-box-arrow-up-right"></i>
-                  <span>{language === 'vi' ? 'Xem Demo' : 'View Demo'}</span>
+                  <span>Xem Demo</span>
                 </a>
               )}
               {project.github && (
@@ -138,7 +136,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             {project.fullDescription && (
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-700">
                 <h2 className="text-2xl font-bold text-white mb-4">
-                  {language === 'vi' ? 'Mô tả chi tiết' : 'Project Overview'}
+                  Mô tả chi tiết
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {project.fullDescription}
@@ -150,7 +148,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             {project.features && project.features.length > 0 && (
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-700">
                 <h2 className="text-2xl font-bold text-white mb-6">
-                  {language === 'vi' ? 'Tính năng chính' : 'Key Features'}
+                  Tính năng chính
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4">
                   {project.features.map((feature, index) => (
@@ -172,7 +170,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                 {project.challenges && (
                   <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-700">
                     <h2 className="text-2xl font-bold text-white mb-6">
-                      {language === 'vi' ? 'Thách thức' : 'Challenges'}
+                      Thách thức
                     </h2>
                     <ul className="space-y-3">
                       {project.challenges.map((challenge, index) => (
@@ -188,7 +186,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                 {project.solutions && (
                   <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-700">
                     <h2 className="text-2xl font-bold text-white mb-6">
-                      {language === 'vi' ? 'Giải pháp' : 'Solutions'}
+                      Giải pháp
                     </h2>
                     <ul className="space-y-3">
                       {project.solutions.map((solution, index) => (
@@ -207,7 +205,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             {project.results && project.results.length > 0 && (
               <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl shadow-lg p-8 text-white">
                 <h2 className="text-2xl font-bold mb-6">
-                  {language === 'vi' ? 'Kết quả đạt được' : 'Results & Impact'}
+                  Kết quả đạt được
                 </h2>
                 <div className="grid md:grid-cols-3 gap-6">
                   {project.results.map((result, index) => (
@@ -228,7 +226,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             {/* Technologies */}
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-lg p-6 border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-4">
-                {language === 'vi' ? 'Công nghệ sử dụng' : 'Technologies'}
+                Công nghệ sử dụng
               </h3>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, index) => (
@@ -242,65 +240,20 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               </div>
             </div>
 
-            {/* Project Details */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-lg p-6 space-y-4 border border-gray-700">
-              <h3 className="text-xl font-bold text-white mb-4">
-                {language === 'vi' ? 'Chi tiết dự án' : 'Project Details'}
-              </h3>
-
-              {project.duration && (
-                <div className="flex items-center gap-3 pb-4 border-b border-gray-700">
-                  <i className="bi bi-clock text-blue-400 text-xl"></i>
-                  <div>
-                    <p className="text-sm text-gray-400">
-                      {language === 'vi' ? 'Thời gian' : 'Duration'}
-                    </p>
-                    <p className="font-semibold text-white">{project.duration}</p>
-                  </div>
-                </div>
-              )}
-
-              {project.role && (
-                <div className="flex items-center gap-3 pb-4 border-b border-gray-700">
-                  <i className="bi bi-person-badge text-blue-400 text-xl"></i>
-                  <div>
-                    <p className="text-sm text-gray-400">
-                      {language === 'vi' ? 'Vai trò' : 'Role'}
-                    </p>
-                    <p className="font-semibold text-white">{project.role}</p>
-                  </div>
-                </div>
-              )}
-
-              {project.client && (
-                <div className="flex items-center gap-3">
-                  <i className="bi bi-building text-blue-400 text-xl"></i>
-                  <div>
-                    <p className="text-sm text-gray-400">
-                      {language === 'vi' ? 'Khách hàng' : 'Client'}
-                    </p>
-                    <p className="font-semibold text-white">{project.client}</p>
-                  </div>
-                </div>
-              )}
-            </div>
-
             {/* CTA Card */}
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl shadow-lg p-6 text-white">
               <h3 className="text-xl font-bold mb-3">
-                {language === 'vi' ? 'Bạn cần dự án tương tự?' : 'Need a Similar Project?'}
+                Bạn cần dự án tương tự?
               </h3>
               <p className="text-white/90 mb-4">
-                {language === 'vi'
-                  ? 'Liên hệ với tôi để thảo luận về dự án của bạn'
-                  : "Let's discuss your project requirements"}
+                Liên hệ với tôi để thảo luận về dự án của bạn
               </p>
               <Link
                 href="/#contact"
                 className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-primary border backdrop-blur-sm text-gray-900 rounded-full font-semibold hover:bg-white hover:!text-black hover:shadow-lg transition-all"
               >
                 <i className="bi bi-envelope"></i>
-                <span>{language === 'vi' ? 'Liên hệ ngay' : 'Contact Now'}</span>
+                <span>Liên hệ ngay</span>
               </Link>
             </div>
           </div>

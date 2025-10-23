@@ -27,7 +27,7 @@ export default function TestimonialsSection() {
         {/* Section Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            CLIENT SAY ABOUT ME
+            ĐÁNH GIÁ CỦA KHÁCH HÀNG
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-300">

@@ -1,15 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { t } from '@/lib/translations';
 import { getContactInfo } from '@/data/personalData';
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
-  const { language, t } = useLanguage();
-  const contactInfo = getContactInfo(language);
+  const contactInfo = getContactInfo('vi');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

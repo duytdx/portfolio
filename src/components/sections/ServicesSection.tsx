@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { t } from '@/lib/translations';
 import { services } from '@/data/services';
 import Link from 'next/link';
 
 export default function ServicesSection() {
-  const { t } = useLanguage();
 
   return (
     <section id="services" className="py-20 bg-gray-900 text-white">

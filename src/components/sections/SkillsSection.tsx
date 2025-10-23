@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { t } from '@/lib/translations';
 import { skills } from '@/data/skills';
 import Image from 'next/image';
 
 export default function SkillsSection() {
-  const { t } = useLanguage();
 
   const categories = {
     frontend: { color: 'from-blue-400 to-cyan-400' },

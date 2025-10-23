@@ -3,14 +3,13 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { t } from '@/lib/translations';
 import { projects } from '@/data/projects';
 
 type FilterCategory = 'all' | 'popular' | 'latest' | 'following' | 'upcoming';
 
 export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState<FilterCategory>('all');
-  const { t } = useLanguage();
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 

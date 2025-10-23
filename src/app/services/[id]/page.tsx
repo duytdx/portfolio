@@ -3,13 +3,11 @@
 import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { services } from '@/data/services';
-import { useLanguage } from '@/contexts/LanguageContext';
 import Image from 'next/image';
 
 export default function ServiceDetailPage() {
   const params = useParams();
   const router = useRouter();
-  const { language } = useLanguage();
   const serviceId = params.id as string;
 
   const service = services.find(s => s.id === serviceId);
@@ -19,13 +17,13 @@ export default function ServiceDetailPage() {
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">
-            {language === 'vi' ? 'Không tìm thấy dịch vụ' : 'Service Not Found'}
+            Không tìm thấy dịch vụ
           </h1>
           <button
             onClick={() => router.push('/#services')}
             className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:shadow-xl transition-all"
           >
-            {language === 'vi' ? 'Quay lại trang chủ' : 'Back to Home'}
+            Quay lại trang chủ
           </button>
         </div>
       </div>
@@ -42,7 +40,7 @@ export default function ServiceDetailPage() {
             className="mb-6 flex items-center gap-2 text-white/80 hover:text-white transition-colors"
           >
             <i className="bi bi-arrow-left text-xl"></i>
-            <span>{language === 'vi' ? 'Quay lại' : 'Back'}</span>
+            <span>Quay lại</span>
           </button>
           
           <div className="flex items-center gap-6 mb-6">
@@ -76,7 +74,7 @@ export default function ServiceDetailPage() {
           {/* Full Description */}
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-6 text-white">
-              {language === 'vi' ? 'Mô tả chi tiết' : 'Detailed Description'}
+              Mô tả chi tiết
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed">
               {service.fullDescription}
@@ -87,7 +85,7 @@ export default function ServiceDetailPage() {
           {service.features && service.features.length > 0 && (
             <div className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-white">
-                {language === 'vi' ? 'Tính năng chính' : 'Key Features'}
+                Tính năng chính
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {service.features.map((feature, index) => (
@@ -107,7 +105,7 @@ export default function ServiceDetailPage() {
           {service.technologies && service.technologies.length > 0 && (
             <div className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-white">
-                {language === 'vi' ? 'Công nghệ sử dụng' : 'Technologies Used'}
+                Công nghệ sử dụng
               </h2>
               <div className="flex flex-wrap gap-3">
                 {service.technologies.map((tech, index) => (
@@ -125,12 +123,10 @@ export default function ServiceDetailPage() {
           {/* CTA Section */}
           <div className="mt-16 p-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl text-center">
             <h3 className="text-2xl font-bold mb-4">
-              {language === 'vi' ? 'Bạn quan tâm đến dịch vụ này?' : 'Interested in this service?'}
+              Bạn quan tâm đến dịch vụ này?
             </h3>
             <p className="text-gray-300 mb-6">
-              {language === 'vi' 
-                ? 'Hãy liên hệ với tôi để thảo luận về dự án của bạn' 
-                : "Let's discuss your project"}
+              Hãy liên hệ với tôi để thảo luận về dự án của bạn
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button
@@ -138,14 +134,14 @@ export default function ServiceDetailPage() {
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 <i className="bi bi-envelope-fill"></i>
-                {language === 'vi' ? 'Liên hệ ngay' : 'Contact Now'}
+                Liên hệ ngay
               </button>
               <button
                 onClick={() => router.push('/#services')}
                 className="px-8 py-4 bg-gray-800 border border-gray-700 text-white rounded-xl font-semibold hover:border-blue-500 transition-all duration-300 flex items-center gap-2"
               >
                 <i className="bi bi-grid-3x3-gap-fill"></i>
-                {language === 'vi' ? 'Xem dịch vụ khác' : 'View Other Services'}
+                Xem dịch vụ khác
               </button>
             </div>
           </div>

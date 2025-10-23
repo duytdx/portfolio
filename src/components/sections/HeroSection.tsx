@@ -1,13 +1,12 @@
 'use client';
 
 import React from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { t } from '@/lib/translations';
 import { getPersonalInfo, getContactInfo } from '@/data/personalData';
 
 export default function HeroSection() {
-  const { language, t } = useLanguage();
-  const personalInfo = getPersonalInfo(language);
-  const contactInfo = getContactInfo(language);
+  const personalInfo = getPersonalInfo('vi');
+  const contactInfo = getContactInfo('vi');
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white overflow-hidden">

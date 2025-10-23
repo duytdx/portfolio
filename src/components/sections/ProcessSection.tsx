@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { t } from '@/lib/translations';
 import { workflowSteps, workflowByLang } from '@/data/process';
 
 export default function ProcessSection() {
-  const { language, t: globalT } = useLanguage();
-  const t = workflowByLang[language];
+  const processT = workflowByLang['vi'];
 
   return (
     <section id="process" className="py-20 bg-slate-800 text-white">
@@ -14,11 +13,11 @@ export default function ProcessSection() {
         {/* Section Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            {t.title}
+            {processT.title}
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-400">
-            {t.subtitle}
+            {processT.subtitle}
           </p>
         </div>
 
@@ -68,10 +67,10 @@ export default function ProcessSection() {
         <div className="mt-16 text-center">
           <div className="inline-block bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
-              {globalT('process.startProject')}
+              {t('process.startProject')}
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl">
-              {globalT('process.startDescription')}
+              {t('process.startDescription')}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
@@ -79,14 +78,14 @@ export default function ProcessSection() {
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 <i className="bi bi-chat-dots-fill"></i>
-                {globalT('process.freeConsultation')}
+                {t('process.freeConsultation')}
               </a>
               <a
                 href="#pricing"
                 className="px-8 py-4 border-2 border-blue-500 text-white rounded-full font-semibold hover:bg-blue-500/10 transition-all duration-300 flex items-center gap-2"
               >
                 <i className="bi bi-currency-dollar"></i>
-                {globalT('process.viewPricing')}
+                {t('process.viewPricing')}
               </a>
             </div>
           </div>

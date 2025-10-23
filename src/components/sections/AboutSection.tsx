@@ -2,12 +2,11 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { t } from '@/lib/translations';
 import { getPersonalInfo, stats } from '@/data/personalData';
 
 export default function AboutSection() {
-  const { language, t } = useLanguage();
-  const personalInfo = getPersonalInfo(language);
+  const personalInfo = getPersonalInfo('vi');
 
   return (
     <section id="about" className="py-20 bg-gray-800 text-white">

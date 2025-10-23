@@ -2,12 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { t } from '@/lib/translations';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,32 +63,6 @@ export default function Header() {
                 </a>
               </li>
             ))}
-            
-            {/* Language Switcher */}
-            <li>
-              <div className="flex gap-2 bg-gray-800 rounded-full p-1">
-                <button
-                  onClick={() => setLanguage('vi')}
-                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                    language === 'vi'
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-                      : 'text-gray-400 hover:text-white'
-                  }`}
-                >
-                  VIE
-                </button>
-                <button
-                  onClick={() => setLanguage('en')}
-                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                    language === 'en'
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-                      : 'text-gray-400 hover:text-white'
-                  }`}
-                >
-                  ENG
-                </button>
-              </div>
-            </li>
           </ul>
 
           {/* Mobile menu button */}
@@ -133,38 +106,6 @@ export default function Header() {
                   </a>
                 </li>
               ))}
-              
-              {/* Language Switcher Mobile */}
-              <li className="px-4 py-3">
-                <div className="flex gap-2 bg-gray-100 rounded-full p-1">
-                  <button
-                    onClick={() => {
-                      setLanguage('vi');
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className={`flex-1 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                      language === 'vi'
-                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-                        : 'text-gray-600 hover:text-gray-900'
-                    }`}
-                  >
-                    VIE
-                  </button>
-                  <button
-                    onClick={() => {
-                      setLanguage('en');
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className={`flex-1 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                      language === 'en'
-                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-                        : 'text-gray-600 hover:text-gray-900'
-                    }`}
-                  >
-                    ENG
-                  </button>
-                </div>
-              </li>
             </ul>
           </div>
         )}

@@ -1,13 +1,12 @@
 'use client';
 
 import React, { useState, FormEvent } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { t } from '@/lib/translations';
 import { getContactInfo } from '@/data/personalData';
 import emailjs from '@emailjs/browser';
 
 export default function ContactSection() {
-  const { language, t } = useLanguage();
-  const contactInfo = getContactInfo(language);
+  const contactInfo = getContactInfo('vi');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 

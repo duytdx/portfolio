@@ -1,13 +1,12 @@
 'use client';
 
 import React from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { t } from '@/lib/translations';
 import { getContactInfo } from '@/data/personalData';
 
 export default function Footer() {
+  const contactInfo = getContactInfo('vi');
   const currentYear = new Date().getFullYear();
-  const { language, t } = useLanguage();
-  const contactInfo = getContactInfo(language);
 
   return (
     <footer className="bg-gray-900 text-white py-12">

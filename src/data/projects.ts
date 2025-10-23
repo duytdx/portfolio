@@ -41,10 +41,7 @@ export const projects: Project[] = [
       "Xử lý 1000+ đơn hàng/tháng",
       "Tốc độ tải trang < 2 giây",
       "Tỷ lệ chuyển đổi tăng 35%",
-    ],
-    duration: "3 tháng",
-    role: "Full-stack Developer",
-    client: "Startup Thương mại điện tử",
+    ]
   },
   {
     id: "car-rental-system",
@@ -84,10 +81,7 @@ export const projects: Project[] = [
       "Tăng 35% tỷ lệ đặt xe trực tuyến",
       "Giảm 50% lỗi trùng lịch thuê",
       "Cải thiện 40% tốc độ xử lý giao dịch và phản hồi người dùng",
-    ],
-    duration: "5 tháng",
-    role: "Full-stack Developer",
-    client: "Công ty dịch vụ thuê xe cao cấp",
+    ]
   },
   {
     id: "portfolio-website",
@@ -129,9 +123,6 @@ export const projects: Project[] = [
       "Lighthouse score 98/100",
       "Page load time < 1 giây",
       "SEO score 100/100",
-    ],
-    duration: "1 tháng",
-    role: "Full-stack Developer",
-    client: "Personal Project",
+    ]
   },
 ];

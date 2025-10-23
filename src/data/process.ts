@@ -11,71 +11,78 @@ export interface WorkflowStep {
 
 export const workflowSteps: WorkflowStep[] = [
   {
-    id: 'consultation',
+    id: "consultation",
     step: 1,
-    icon: 'chat-dots',
-    title: 'Tư vấn & Phân tích',
-    description: 'Trao đổi chi tiết về dự án, yêu cầu, mục tiêu và ngân sách. Phân tích và đề xuất giải pháp phù hợp nhất.',
-    duration: '1-2 ngày',
+    icon: "chat-dots",
+    title: "Trao đổi & Tư vấn",
+    description:
+      "Trao đổi nhanh qua Zalo hoặc Messenger để hiểu rõ yêu cầu, mục tiêu và phong cách website mong muốn.",
+    duration: "0.5 - 1 ngày",
   },
   {
-    id: 'proposal',
+    id: "proposal",
     step: 2,
-    icon: 'file-earmark-text',
-    title: 'Báo giá & Hợp đồng',
-    description: 'Gửi báo giá chi tiết, timeline dự án và hợp đồng. Sau khi thống nhất, ký kết và thanh toán đặt cọc 30-50%.',
-    duration: '1-2 ngày',
+    icon: "file-earmark-text",
+    title: "Báo giá & Xác nhận",
+    description:
+      "Gửi demo mẫu hoặc layout tham khảo kèm báo giá chi tiết. Khách xác nhận và chuyển cọc 30-50% để bắt đầu.",
+    duration: "1 ngày",
   },
   {
-    id: 'design',
+    id: "design",
     step: 3,
-    icon: 'palette',
-    title: 'Thiết kế UI/UX',
-    description: 'Thiết kế mockup, prototype giao diện. Review và chỉnh sửa theo feedback cho đến khi hài lòng.',
-    duration: '3-7 ngày',
+    icon: "palette",
+    title: "Thiết kế Giao diện",
+    description:
+      "Thiết kế giao diện trên Figma hoặc code trực tiếp. Gửi preview sớm để khách duyệt và góp ý.",
+    duration: "2-3 ngày",
   },
   {
-    id: 'development',
+    id: "development",
     step: 4,
-    icon: 'code-slash',
-    title: 'Phát triển',
-    description: 'Coding frontend và backend theo thiết kế đã duyệt. Cập nhật tiến độ định kỳ, demo từng phần hoàn thành.',
-    duration: '1-6 tuần',
+    icon: "code-slash",
+    title: "Lập trình Website",
+    description:
+      "Xây dựng website hoàn chỉnh (frontend + backend nếu có). Gửi bản demo cho khách kiểm tra tiến độ.",
+    duration: "3-7 ngày",
   },
   {
-    id: 'testing',
+    id: "testing",
     step: 5,
-    icon: 'bug',
-    title: 'Testing & QA',
-    description: 'Test toàn bộ tính năng, fix bugs, tối ưu performance. Bàn giao cho client test và góp ý.',
-    duration: '3-5 ngày',
+    icon: "bug",
+    title: "Kiểm thử & Chỉnh sửa",
+    description:
+      "Test toàn bộ tính năng, giao diện, tốc độ. Sửa lỗi và tinh chỉnh theo phản hồi của khách.",
+    duration: "1-2 ngày",
   },
   {
-    id: 'deployment',
+    id: "deployment",
     step: 6,
-    icon: 'rocket-takeoff',
-    title: 'Deploy & Bàn giao',
-    description: 'Deploy lên server/hosting, hướng dẫn sử dụng. Bàn giao source code, tài liệu. Thanh toán số tiền còn lại.',
-    duration: '1-2 ngày',
+    icon: "rocket-takeoff",
+    title: "Bàn giao & Triển khai",
+    description:
+      "Upload website lên hosting hoặc Vercel, bàn giao file source code, hướng dẫn sử dụng và thanh toán phần còn lại.",
+    duration: "0.5 - 1 ngày",
   },
   {
-    id: 'support',
+    id: "support",
     step: 7,
-    icon: 'headset',
-    title: 'Hỗ trợ & Bảo hành',
-    description: 'Hỗ trợ sửa lỗi phát sinh, hướng dẫn thêm nếu cần. Bảo hành theo gói dịch vụ đã chọn.',
-    duration: '1-6 tháng',
+    icon: "headset",
+    title: "Hỗ trợ Sau Bàn giao",
+    description:
+      "Hỗ trợ chỉnh sửa nhỏ, hướng dẫn thêm hoặc xử lý lỗi trong thời gian bảo hành tùy theo gói dịch vụ (7 ngày – 3 tháng).",
+    duration: "7 ngày - 3 tháng",
   },
 ];
 
 // Workflow data by language
 export const workflowByLang = {
   vi: {
-    title: 'QUY TRÌNH LÀM VIỆC',
-    subtitle: 'Quy trình làm việc chuyên nghiệp, minh bạch từ A đến Z',
+    title: "QUY TRÌNH LÀM VIỆC",
+    subtitle: "Quy trình làm việc chuyên nghiệp, minh bạch từ A đến Z",
   },
   en: {
-    title: 'WORKFLOW PROCESS',
-    subtitle: 'Professional and transparent workflow from A to Z',
+    title: "WORKFLOW PROCESS",
+    subtitle: "Professional and transparent workflow from A to Z",
   },
 };
